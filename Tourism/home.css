@@ -1,0 +1,178 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+
+}
+body{
+    font-family: Arial, sans-serif;
+
+}
+
+.main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.navbar{
+    width: 100%;
+    height: 75px;
+    margin: auto;
+    background-color: #2d6a4f;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 7px;
+}
+.logo{
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    color:#d8f3dc;
+
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    margin-left: 200px;
+    
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 60px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+ul li a{
+    color:#f1faee;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: arial;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+ul li a:hover{
+    color:#d8f3dc;
+    font-size: 21px;
+}
+.book{
+    margin-right: 20px;
+    float: right;
+    padding-top: 10px;
+}
+
+.bookus{
+    color:#2d6a4f;
+    font-size: 20px;
+    background-color:#d8f3dc;
+    border-radius: 50px;
+    border-color:#d8f3dc;
+    height: 50px;
+    width: auto;
+    padding: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.bookus:hover{
+    background-color: #2d6a4f;
+    color:#d8f3dc;
+    border-color:#d8f3dc;
+    font-size: 21px;
+    font-weight: 200;
+
+}
+
+.content{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aquamarine;
+    /*background-image: url(/img/giraffe.jpg);*/
+}
+
+.search{
+    font-family: 'Times New Roman';
+    width: 250px;
+    height: auto;
+   background-color: transparent;   
+    border: 2px solid #2d6a4f;
+    margin: 5px;
+    color:#2d6a4f;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    float: right;
+}
+.search h2{
+    font-size:25px;
+    font-weight: bold;
+    color: #2d6a4f;
+    margin-top: 0;
+    text-align: center;
+}
+
+.fields{
+    margin-bottom: 10px;
+}
+
+.fields input[type="text"] {
+    /* Style the input fields */
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #2d6a4f;
+    border-radius: 10px;
+    color: #2d6a4f;
+    background: transparent;
+}
+.fields input[type="date"]{
+    /* Style the input fields */
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #2d6a4f;
+    border-radius: 10px;
+    color: #2d6a4f;
+    background: transparent;
+}
+.finddestination {
+    /* Style the find destination button */
+    background-color:#2d6a4f;
+    color:#d8f3dc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: absolute;
+    left: 50%;
+    transition: 0.4s ease-in;
+}
+.finddestination:hover {
+    /* Add a hover effect to the button */
+    background-color:#d8f3dc;
+    color: #2d6a4f;
+    border: 1px solid #2d6a4f;
+  }
