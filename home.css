@@ -8,20 +8,22 @@
 }
 body{
     font-family: Arial, sans-serif;
-
-}
-
-.main{
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 
+
+}
+.starter{
+    background-image: url('img/large savannah view.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .navbar{
     width: 100%;
     height: 75px;
     margin: auto;
-    background-color: #2d6a4f;
+    background-color: #d8f3dc 0.8;      
 }
 
 .icon{
@@ -35,7 +37,7 @@ body{
     padding-left: 20px;
     float: left;
     padding-top: 10px;
-    color:#d8f3dc;
+    color:#2d6a4f;
 
 }
 
@@ -62,8 +64,8 @@ ul li{
 }
 
 ul li a{
-    color:#f1faee;
-    font-size: 20px;
+    color:#2d6a4f;
+    font-size: 25px;
     font-weight: 200;
     font-family: arial;
     cursor: pointer;
@@ -105,18 +107,34 @@ ul li a:hover{
 
 .content1{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-left: auto;
     margin-right: auto;
-    background-color: aquamarine;
-    background-image: url(/img/giraffe.jpg);
-    border: 2px solid #2d6a4f;
+}
+.text-content {
+    flex: 1;
+    margin-right: 20px;
+    color: #030303;
+    font-size: 65px;
+}
+.text-content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    letter-spacing:2px;
+}
+.text-content h1 span{
+    color: #2d6a4f;
+    font-size: 80px;
 }
 
-.search{
+.content1 .search{
     font-family: 'Times New Roman';
     width: 250px;
     height: auto;
-   background-color: transparent;   
+    background-color:#d8f3dc;   
     border: 2px solid #2d6a4f;
     margin: 10px;
     color:#2d6a4f;
@@ -125,6 +143,7 @@ ul li a:hover{
     position: relative;
     float: right;
 }
+
 .search h2{
     font-size:25px;
     font-weight: bold;
@@ -177,6 +196,12 @@ ul li a:hover{
     color: #2d6a4f;
     border: 1px solid #2d6a4f;
 }
+.popular-destinations-title {
+    font-size:50px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 1px;
+}
 
 .popular-destinations{
     display: flex;
@@ -186,7 +211,13 @@ ul li a:hover{
     width: 100%;
     box-sizing: border-box;
     min-height: 400px;
+    background-color: #d8f3dc;
+    border-radius: 20px;
 }
+.popular-destinations header{
+    display: flex;
+}
+
 
 .container{
     background-size: cover;
@@ -238,3 +269,64 @@ ul li a:hover{
 .container.destination6 {
     background-image: url('img/Kenya.jpeg');
 }
+
+
+.best-prices-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 0 1px;
+}
+
+.best-prices{
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 400px;
+    background-image: url('img/mount suswa pointing.jpg');
+    border-radius: 20px;
+}
+.container{
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #2d6a4f;
+    border-radius: 8px;
+    padding: 0px;
+    margin: 0 10px;
+    min-width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.best-prices h1{
+    position: absolute;
+    top: 10px;  
+    left: 10px;  
+    margin: 0;
+}
+
+.container.range1 {
+    background-image: url('img/large savannah view.jpg');
+}
+.container.range2 {
+    background-image: url('img/maasai jumping 2.jpeg');
+}
+.container.range3 {
+    background-image: url('img/mount suswa pointing.jpg');
+}
+.container.range4 {
+    background-image: url('img/Mount-Kenya-Climbing.jpg');
+}
+.container.range5 {
+    background-image: url('img/mountain hiking.jpg');
+}
+.container.range6 {
+    background-image: url('img/mt kenya hiking.jpg');
+}
+
