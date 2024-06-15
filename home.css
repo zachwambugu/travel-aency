@@ -116,7 +116,7 @@ ul li a:hover{
 .text-content {
     flex: 1;
     margin-right: 20px;
-    color: #030303;
+    color:#d8f3dc;
     font-size: 65px;
 }
 .text-content h1{
@@ -196,11 +196,16 @@ ul li a:hover{
     color: #2d6a4f;
     border: 1px solid #2d6a4f;
 }
+.destinations{
+    background-color: #d8f3dc;
+    margin-top: 0;
+}
 .popular-destinations-title {
     font-size:50px;
     font-weight: bold;
     text-align: center;
     margin: 10px 0 1px;
+    color: #2d6a4f;
 }
 
 .popular-destinations{
@@ -211,7 +216,6 @@ ul li a:hover{
     width: 100%;
     box-sizing: border-box;
     min-height: 400px;
-    background-color: #d8f3dc;
     border-radius: 20px;
 }
 .popular-destinations header{
@@ -232,6 +236,7 @@ ul li a:hover{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
 
 }
 .container h2{
@@ -251,6 +256,31 @@ ul li a:hover{
     border-radius: 10px;
     padding: 0px 5px;
 }
+.popular-destinations .learnmore{
+    width: 100px;
+    height: 30px;
+    background:#2d6a4f;
+    border: none;
+    margin-bottom: 1px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .4s ease;
+    position: absolute;
+    /*left: 0;*/
+    right: 0;
+    bottom: 0;
+}
+
+.popular-destinations .learnmore a{
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+}
+
+.learnmore:hover{
+    background-color:#d8f3dc;
+}
 .container.destination1 {
     background-image: url('img/camels ride.jpg');
 }
@@ -269,13 +299,40 @@ ul li a:hover{
 .container.destination6 {
     background-image: url('img/Kenya.jpeg');
 }
+.destinations .alldestinations{
+    width: 150px;
+    height: 30px;
+    background:#2d6a4f;
+    border: none;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .4s ease;
+    position: absolute;
+}
+.destinations .alldestinations a{
+    text-decoration: none;
+    color:black;
+    transition: .3s ease;
+}
+.destinations .alldestinations:hover{
+    background-color:#d8f3dc;
+    color: #2d6a4f;
+}
 
+.prices{
+    background-image: url('img/mount suswa pointing.jpg');
+
+}
 
 .best-prices-title {
-    font-size: 24px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     margin: 50px 0 1px;
+    color: #2d6a4f;
 }
 
 .best-prices{
@@ -286,7 +343,6 @@ ul li a:hover{
     width: 100%;
     box-sizing: border-box;
     min-height: 400px;
-    background-image: url('img/mount suswa pointing.jpg');
     border-radius: 20px;
 }
 .container{
