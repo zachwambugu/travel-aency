@@ -386,3 +386,142 @@ ul li a:hover{
     background-image: url('img/mt kenya hiking.jpg');
 }
 
+.logo {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.logo h2 {
+    font-size: 24px;
+    color: #2d6a4f;
+    margin-bottom: 10px;
+}
+
+.logos ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0px;
+}
+
+.logos ul li {
+    margin: 0 100px;
+}
+
+.logos ul li img {
+    max-width: 120px; 
+    height: auto;
+    display: block;
+}
+.logos ul li img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;
+    margin:20px;
+    margin-bottom: 200px;
+}
+
+.content-text {
+    flex: 1;
+    margin-right: 20px;
+    border: 1px solid #2d6a4f;
+    border-radius: 20px;
+    height: 410px;
+}
+.content-text  h2{
+    color: #2d6a4f;
+    margin: 10px;
+}
+
+.content-text p {
+    margin: 0 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2d6a4f;
+}
+
+.content-image {
+    flex:1;
+    max-width: 50%; 
+}
+
+.content-image img {
+    max-width: 100%;
+    height: 410px;
+    display: block;
+    border-radius: 10px; 
+}
+
+
+.footer {
+    width: 100%;
+    background:#2d6a4f;
+    color: #fff;
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+    transition: bottom 0.5s;
+    display: none;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+}
+
+.social-link {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    text-decoration:solid;
+    color: #d8f3dc;
+}
