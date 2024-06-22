@@ -1,89 +1,74 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
+*{
+    margin: 0px;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #2d6a4f;
-    color: white;
-}
-
-header button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-h1 {
-    margin: 0;
-}
-
-main {
-    padding: 20px;
-}
-
-h2 {
-    margin-top: 0;
-    text-align: center;
-}
-
-.destination-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-}
-
-.destination {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.navbar{
+    background-color: #d8f3dc;
     overflow: hidden;
+    display: flex;
+}
+.logo a{
+    text-decoration: none;
+    color: #2d6a4f ;
+    font-family: arial;
+    font-size: 30px;
+    font-weight:900;
+    margin: auto;
+}
+.title h2{
+    font-family: arial;
+    color: #2d6a4f;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.all-destinations {
+    margin: 20px    ;
     position: relative;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+}
+
+.container {
+    border: 2px solid #2d6a4f;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 320px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8f3dc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .destination img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
+}
+.footer{
+    bottom: 0px;
 }
 
-.destination-title {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 5px;
-    border-radius: 3px;
-}
-
-.learn-more {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+footer .booking{
     width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
-.book-btn {
-    display: block;
-    width: 100%;
+    height: 40px;
+    font-size: 25px;
     background-color: #2d6a4f;
-    color: white;
-    border: none;
-    padding: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    margin-top: 20px;
+    color: #d8f3dc;
+    border-radius: 15px;
+    border-color: #2d6a4f;
+
+}
+
+footer .booking:hover{
+    background-color: #d8f3dc;
+    color: #2d6a4f;
+    font-size: 30px;
 }

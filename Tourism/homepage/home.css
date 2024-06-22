@@ -1,0 +1,528 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+
+}
+body{
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+.starter{
+    background-image: url('../img/large savannah view.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 450px;
+}
+.navbar{
+    width: 100%;
+    height: 75px;
+    margin: auto;
+    background-color: #d8f3dc 0.8;      
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 7px;
+}
+.logo{
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    color:#2d6a4f;
+
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    margin-left: 200px;
+    
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 60px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+ul li a{
+    color:#2d6a4f;
+    font-size: 25px;
+    font-weight: 200;
+    font-family: arial;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+ul li a:hover{
+    color:#d8f3dc;
+    font-size: 21px;
+}
+.book{
+    margin-right: 20px;
+    float: right;
+    padding-top: 10px;
+}
+
+.bookus{
+    color:#2d6a4f;
+    font-size: 20px;
+    background-color:#d8f3dc;
+    border-radius: 50px;
+    border-color:#d8f3dc;
+    height: 50px;
+    width: auto;
+    padding: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.bookus:hover{
+    background-color: #2d6a4f;
+    color:#d8f3dc;
+    border-color:#d8f3dc;
+    font-size: 21px;
+    font-weight: 200;
+
+}
+
+.content1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-content {
+    flex: 1;
+    margin-right: 20px;
+    color:#d8f3dc;
+    font-size: 65px;
+}
+.text-content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    letter-spacing:2px;
+}
+.text-content h1 span{
+    color: #2d6a4f;
+    font-size: 80px;
+}
+
+.content1 .search{
+    font-family: 'Times New Roman';
+    width: 250px;
+    height: auto;
+    background-color:#d8f3dc;   
+    border: 2px solid #2d6a4f;
+    margin: 10px;
+    color:#2d6a4f;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    float: right;
+}
+
+.search h2{
+    font-size:25px;
+    font-weight: bold;
+    color: #2d6a4f;
+    margin-top: 0;
+    text-align: center;
+}
+
+.fields{
+    margin-bottom: 10px;
+}
+
+.fields input[type="text"] {
+    /* Style the input fields */
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #2d6a4f;
+    border-radius: 10px;
+    color: #2d6a4f;
+    background: transparent;
+}
+.fields input[type="date"]{
+    /* Style the input fields */
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #2d6a4f;
+    border-radius: 10px;
+    color: #2d6a4f;
+    background: transparent;
+}
+.finddestination {
+    /* Style the find destination button */
+    background-color:#2d6a4f;
+    color:#d8f3dc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: absolute;
+    left: 50%;
+    transition: 0.4s ease-in;
+}
+.finddestination:hover {
+    /* Add a hover effect to the button */
+    background-color:#d8f3dc;
+    color: #2d6a4f;
+    border: 1px solid #2d6a4f;
+}
+.destinations{
+    background-color: #d8f3dc;
+    margin-top: 0;
+}
+.popular-destinations-title {
+    font-size:50px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 1px;
+    color: #2d6a4f;
+}
+
+.popular-destinations{
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 400px;
+    border-radius: 20px;
+}
+.popular-destinations header{
+    display: flex;
+}
+
+
+.container{
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #2d6a4f;
+    border-radius: 8px;
+    padding: 0px;
+    margin: 0 10px;
+    min-width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+
+}
+.container h2{
+    font-size: 18px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.container .location{
+    color: #2d6a4f;
+    opacity: 0.5;
+    font-size: 25px;
+    background-color:#d8f3dc;
+    max-width: fit-content;
+    border-radius: 10px;
+    padding: 0px 5px;
+}
+.popular-destinations .learnmore{
+    width: 100px;
+    height: 30px;
+    background:#2d6a4f;
+    border: none;
+    margin-bottom: 1px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .4s ease;
+    position: absolute;
+    /*left: 0;*/
+    right: 0;
+    bottom: 0;
+}
+
+.popular-destinations .learnmore a{
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+}
+
+.learnmore:hover{
+    background-color:#d8f3dc;
+}
+.container.destination1 {
+    background-image: url('../img/camels ride.jpg');
+}
+.container.destination2 {
+    background-image: url('../img/coast maasai.jpg');
+}
+.container.destination3 {
+    background-image: url('../img/elephant ride.jpg');
+}
+.container.destination4 {
+    background-image: url('../img/giraffe.jpg');
+}
+.container.destination5 {
+    background-image: url('../img/kenya-exp1.jpg');
+}
+.container.destination6 {
+    background-image: url('../img/Kenya.jpeg');
+}
+.destinations .alldestinations{
+    width: 150px;
+    height: 30px;
+    background:#2d6a4f;
+    border: none;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .4s ease;
+    position: absolute;
+}
+.destinations .alldestinations a{
+    text-decoration: none;
+    color:black;
+    transition: .3s ease;
+}
+.destinations .alldestinations:hover{
+    background-color:#d8f3dc;
+    color: #2d6a4f;
+}
+
+.prices{
+    background-image: url('../img/mount suswa pointing.jpg');
+
+}
+
+.best-prices-title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 0 1px;
+    color: #2d6a4f;
+}
+
+.best-prices{
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 400px;
+    border-radius: 20px;
+}
+.container{
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #2d6a4f;
+    border-radius: 8px;
+    padding: 0px;
+    margin: 0 10px;
+    min-width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.best-prices h1{
+    position: absolute;
+    top: 10px;  
+    left: 10px;  
+    margin: 0;
+}
+
+.container.range1 {
+    background-image: url('../img/large savannah view.jpg');
+}
+.container.range2 {
+    background-image: url('../img/maasai jumping 2.jpeg');
+}
+.container.range3 {
+    background-image: url('../img/mount suswa pointing.jpg');
+}
+.container.range4 {
+    background-image: url('../img/Mount-Kenya-Climbing.jpg');
+}
+.container.range5 {
+    background-image: url('../img/mountain hiking.jpg');
+}
+.container.range6 {
+    background-image: url('../img/mt kenya hiking.jpg');
+}
+
+.logo {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.logo h2 {
+    font-size: 24px;
+    color: #2d6a4f;
+    margin-bottom: 10px;
+}
+
+.logos ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0px;
+}
+
+.logos ul li {
+    margin: 0 100px;
+}
+
+.logos ul li img {
+    max-width: 120px; 
+    height: auto;
+    display: block;
+}
+.logos ul li img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;
+    margin:20px;
+    margin-bottom: 200px;
+}
+
+.content-text {
+    flex: 1;
+    margin-right: 20px;
+    border: 1px solid #2d6a4f;
+    border-radius: 20px;
+    height: 410px;
+}
+.content-text  h2{
+    color: #2d6a4f;
+    margin: 10px;
+}
+
+.content-text p {
+    margin: 0 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2d6a4f;
+}
+
+.content-image {
+    flex:1;
+    max-width: 50%; 
+}
+
+.content-image img {
+    max-width: 100%;
+    height: 410px;
+    display: block;
+    border-radius: 10px; 
+}
+
+
+.footer {
+    width: 100%;
+    background:#2d6a4f;
+    color: #fff;
+    position: fixed;
+    bottom: -30px;
+    left: 0;
+    transition: bottom 0.5s;
+    display: none;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+}
+
+.social-link {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    text-decoration:solid;
+    color: #d8f3dc;
+}
