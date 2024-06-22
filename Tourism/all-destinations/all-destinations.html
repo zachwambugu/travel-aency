@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Destinations</title>
+    <link rel="stylesheet" href="all-destination.css">
+</head>
+<body>
+    <header>
+        <button class="back-btn">&#8592;</button>
+        <h1>All destinations</h1>
+        <button class="home-btn">&#8962;</button>
+    </header>
+    
+    <main>
+        <h2>All destinations</h2>
+        <div class="destination-grid">
+            <div class="destination">
+                <picture>
+                    <source srcset="img/destination1.webp" type="image/webp">
+                    <source srcset="img/destination1.jpg" type="image/jpeg">
+                    <img src="all-destinations/landscape view.jpg" alt="Destination 1" loading="lazy">
+                </picture>
+                <p class="destination-title">Safari Park</p>
+                <button class="learn-more" onclick="window.location.href='destination1.html'">Learn more</button>
+            </div>
+            <!-- Repeat the above block for each destination -->
+        </div>
+        <button class="book-btn" onclick="window.location.href='booking.html'">Book with Us</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
