@@ -1,27 +1,67 @@
 *{
     margin: 0px;
+    text-decoration: none;
 }
 
+
 .navbar{
-    background-color: #d8f3dc;
-    overflow: hidden;
-    display: flex;
-}
-.logo a{
-    text-decoration: none;
-    color: #2d6a4f ;
-    font-family: arial;
-    font-size: 30px;
-    font-weight:900;
+    width: 100%;
+    height: 75px;
     margin: auto;
+    background-color: #d8f3dc 0.8;      
 }
-.title h2{
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 7px;
+}
+.logo{
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    color:#2d6a4f;
+
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    margin-left: 200px;
+    
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 60px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+ul li a{
+    color:#2d6a4f;
+    font-size: 25px;
+    font-weight: 200;
     font-family: arial;
-    color: #2d6a4f;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%)
+    cursor: pointer;
+    transition: 0.4s ease;
 }
+
+ul li a:hover{
+    color:#d8f3dc;
+    font-size: 21px;
+}
+
 
 .all-destinations {
     margin: 20px    ;

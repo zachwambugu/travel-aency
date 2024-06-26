@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.navbar{
+    width: 100%;
+    height: 75px;
+    margin: auto;
+    background-color: #d8f3dc 0.8;      
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 7px;
+}
+.logo{
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    color:#2d6a4f;
+
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    margin-left: 200px;
+    
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 60px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+ul li a{
+    color:#2d6a4f;
+    font-size: 25px;
+    font-weight: 200;
+    font-family: arial;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+ul li a:hover{
+    color:#d8f3dc;
+    font-size: 21px;
+}
+.book{
+    margin-right: 20px;
+    float: right;
+    padding-top: 10px;
+}
+
+.bookus{
+    color:#2d6a4f;
+    font-size: 20px;
+    background-color:#d8f3dc;
+    border-radius: 50px;
+    border-color:#d8f3dc;
+    height: 50px;
+    width: auto;
+    padding: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.bookus:hover{
+    background-color: #2d6a4f;
+    color:#d8f3dc;
+    border-color:#d8f3dc;
+    font-size: 21px;
+    font-weight: 200;
+
+}
+
+.about-us {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-us h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-us .content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-us h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
