@@ -1,67 +1,48 @@
 *{
     margin: 0px;
     text-decoration: none;
+    font-family: arial;
 }
 
-
-.navbar{
-    width: 100%;
-    height: 75px;
-    margin: auto;
-    background-color: #d8f3dc 0.8;      
-}
-
-.icon{
-    width: 200px;
-    float: left;
-    height: 7px;
-}
-.logo{
-    font-size: 35px;
-    font-family: Arial;
-    padding-left: 20px;
-    float: left;
-    padding-top: 10px;
-    color:#2d6a4f;
-
-}
-
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
-    margin-left: 200px;
-    
-}
-
-ul{
-    float: left;
+header {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 10px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-ul li{
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo p {
+    margin: 0;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+nav ul {
     list-style: none;
-    margin-left: 60px;
-    margin-top: 10px;
-    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-ul li a{
-    color:#2d6a4f;
-    font-size: 25px;
-    font-weight: 200;
-    font-family: arial;
-    cursor: pointer;
-    transition: 0.4s ease;
+nav ul li {
+    margin: 0 10px;
 }
 
-ul li a:hover{
-    color:#d8f3dc;
-    font-size: 21px;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
-
 
 .all-destinations {
     margin: 20px    ;
@@ -92,23 +73,72 @@ ul li a:hover{
     height: 100%;
     object-fit: contain;
 }
-.footer{
-    bottom: 0px;
+
+.floating-button {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 1000;
 }
 
-footer .booking{
-    width: 100%;
-    height: 40px;
-    font-size: 25px;
+.floating-button {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
     background-color: #2d6a4f;
-    color: #d8f3dc;
+    color:#d8f3dc;
+    text-align: center;
+    line-height: 40px;
     border-radius: 15px;
-    border-color: #2d6a4f;
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
 }
 
-footer .booking:hover{
-    background-color: #d8f3dc;
-    color: #2d6a4f;
-    font-size: 30px;
+.floating-button a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    vertical-align: middle;
+    color: #d8f3dc;
+}
+
+.floating-button:hover {
+    background-color: #1b4f37;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #2d6a4f;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    section.booking-form form {
+        flex-direction: column;
+    }
 }

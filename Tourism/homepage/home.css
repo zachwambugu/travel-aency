@@ -15,97 +15,70 @@ body{
 
 }
 .starter{
-    background-image: url('../img/large savannah view.jpg');
+    background-image: url('../img/elephant ride.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 450px;
+    min-height: 550px;
 }
-.navbar{
-    width: 100%;
-    height: 75px;
-    margin: auto;
-    background-color: #d8f3dc 0.8;      
-}
-
-.icon{
-    width: 200px;
-    float: left;
-    height: 7px;
-}
-.logo{
-    font-size: 35px;
-    font-family: Arial;
-    padding-left: 20px;
-    float: left;
-    padding-top: 10px;
-    color:#2d6a4f;
-
-}
-
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
-    margin-left: 200px;
-    
-}
-
-ul{
-    float: left;
+header {
+    background-color: #2d6a4f;
+    color:#d8f3dc;
+    padding: 10px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-ul li{
-    list-style: none;
-    margin-left: 60px;
-    margin-top: 10px;
-    font-size: 14px;
+header .logo {
+    display: flex;
+    align-items: center;
 }
 
-ul li a{
-    color:#2d6a4f;
-    font-size: 25px;
-    font-weight: 200;
-    font-family: arial;
-    cursor: pointer;
-    transition: 0.4s ease;
-}
-
-ul li a:hover{
-    color:#d8f3dc;
-    font-size: 21px;
-}
-.book{
+header .logo p {
+    margin: 0;
     margin-right: 20px;
-    float: right;
-    padding-top: 10px;
-}
-
-.bookus{
-    color:#2d6a4f;
     font-size: 20px;
-    background-color:#d8f3dc;
-    border-radius: 50px;
-    border-color:#d8f3dc;
-    height: 50px;
-    width: auto;
-    padding: 10px;
-    margin-right: 20px;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+    font-weight: 600;
 }
 
-.bookus:hover{
-    background-color: #2d6a4f;
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
     color:#d8f3dc;
-    border-color:#d8f3dc;
-    font-size: 21px;
-    font-weight: 200;
-
+    text-decoration: none;
+    font-weight: bold;
 }
-
+header .book{
+    margin-left: 30px;
+}
+header .book .bookbtn{
+    background-color:#d8f3dc;
+    height: 40px;
+    width: 120px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+header .book .bookbtn:hover{
+    background-color: #7eaa84;
+    color: #000;
+}
+header .book .bookbtn a{
+    text-decoration: none;
+    color: #2d6a4f;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: 600;
+}
 .content1{
     width: 100%;
     display: flex;
@@ -131,72 +104,110 @@ ul li a:hover{
     font-size: 80px;
 }
 
-.content1 .search{
-    font-family: 'Times New Roman';
-    width: 250px;
-    height: auto;
-    background-color:#d8f3dc;   
-    border: 2px solid #2d6a4f;
-    margin: 10px;
-    color:#2d6a4f;
-    padding: 20px;
+.form{
+    width: 280px;
+    height: 410px;
+    background:linear-gradient(to top, rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: 100px;
+    right:20px;
     border-radius: 10px;
-    position: relative;
-    float: right;
+    padding: 25px;
+}
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #2d6a4f;
+    font-size: 22px;
+    background-color: #d8f3dc;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
 }
 
-.search h2{
-    font-size:25px;
-    font-weight: bold;
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #2d6a4f;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #d8f3dc;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #d8f3dc;
+    font-family: arial;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #2d6a4f;
+    border: none;
+    margin-top:  30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #d8f3dc;
+    transition: 0.4s ease;
+}
+
+.btnn:hover{
+    background:#d8f3dc;
     color: #2d6a4f;
-    margin-top: 0;
+}
+
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: arial;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form.link a{
+    text-decoration: none;
+    color: #2d6a4f;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
-.fields{
-    margin-bottom: 10px;
+.icons a{
+    text-decoration: none;
+    color: #d8f3dc;
 }
 
-.fields input[type="text"] {
-    /* Style the input fields */
-    width: 100%;
-    height: 25px;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #2d6a4f;
-    border-radius: 10px;
-    color: #2d6a4f;
-    background: transparent;
+.icons ion-icon{
+    color: #d8f3dc;
+    font-size: 30px;
+    padding-left:14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
 }
-.fields input[type="date"]{
-    /* Style the input fields */
-    width: 100%;
-    height: 25px;
-    padding: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #2d6a4f;
-    border-radius: 10px;
-    color: #2d6a4f;
-    background: transparent;
+
+
+.icons ion-icon:hover{
+    color:#2d6a4f;
 }
-.finddestination {
-    /* Style the find destination button */
-    background-color:#2d6a4f;
-    color:#d8f3dc;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    display: absolute;
-    left: 50%;
-    transition: 0.4s ease-in;
-}
-.finddestination:hover {
-    /* Add a hover effect to the button */
-    background-color:#d8f3dc;
-    color: #2d6a4f;
-    border: 1px solid #2d6a4f;
-}
+
+
 .destinations{
     background-color: #d8f3dc;
     margin-top: 0;
@@ -468,11 +479,10 @@ ul li a:hover{
     background: #2d6a4f;
     color: #fff;
     position: fixed;
-    bottom: -30px;
+    bottom: 0; /* Ensure the footer is fixed at the bottom */
     left: 0;
     transition: bottom 0.5s;
-    display: none;
-    padding: 10px 0;
+    display: block; /* Make sure the footer is visible */
 }
 
 .footer-content {
@@ -508,11 +518,18 @@ ul li a:hover{
     margin-bottom: 5px;
     font-size: 14px; /* Smaller font size for quick links */
 }
+.footer-section ul li a{
+    font-size: 16px;
+}
+.footer-section ul li a:hover{
+    font-size: 17px;
+}
 
 .footer-bottom {
     text-align: center;
     padding: 10px;
     background: #2d6a4f; /* Ensure same background color */
+    border-top: 1px solid #d8f3dc; /* Optional: add a border for better separation */
 }
 
 .social-link {

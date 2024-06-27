@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Page</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <header>
+        <div class="user-info">
+            <p>Welcome, User Name!</p>
+            <a href="logout.html">Logout</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../homepage/home.html">Home</a></li>
+                <li><a href="../about-us/about-us.html">About Us</a></li>
+                <li><a href="../all-destinations/all-destinations.html">Gallery</a></li>
+                <li><a href="../privacy/privacy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="booking-form">
+            <h1>Book Your Adventure</h1>
+            <form action="confirm_booking.html" method="post">
+                <label for="destination">Select Destination:</label>
+                <select id="destination" name="destination">
+                    <option value="destination1">Destination 1</option>
+                    <option value="destination2">Destination 2</option>
+                    <!-- Add more destinations as needed -->
+                </select>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+                
+                <label for="people">Number of People:</label>
+                <input type="number" id="people" name="people" min="1" required>
+                
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment">
+                    <option value="credit_card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <!-- Add more payment options as needed -->
+                </select>
+                
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+        
+        <section class="booking-summary">
+            <h2>Booking Summary</h2>
+            <!-- Booking summary details will be displayed here after form submission -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 JALIKOI. All rights reserved.</p>
+    </footer>
+</body>
+</html>
