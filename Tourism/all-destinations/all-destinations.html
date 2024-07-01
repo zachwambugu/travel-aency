@@ -5,6 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All destinations</title>
     <link rel="stylesheet" href="all-destination.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ebf3eb;
+            margin: 0;
+            padding: 0;
+        }
+        .destinations {
+            padding: 20px;
+        }
+        .popular-destinations-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .popular-destinations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .destination-card {
+            background-color: #d8f3dc;
+            border: 1px solid #d8f3dc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            text-align: center;
+            padding: 10px;
+        }
+        .destination-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .destination-card h2 {
+            font-size: 1.5em;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .destination-card p {
+            margin: 0;
+            padding: 0 10px;
+        }
+        .destination-card button {
+            background-color:#2d6a4f;
+            color: #d8f3dc;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px 0;
+        }
+        .destination-card button a {
+            color: #d8f3dc;
+            text-decoration: none;
+        }
+        .destination-card button:hover {
+            background-color:#2d6a4f;
+        }
+        .destination-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,34 +87,11 @@
             </ul>
         </nav>
     </header>
-
-    <div class="all-destinations">
-        <div class="container">
-            <div class="destination">
-                <img src="../img/camels ride.jpg" alt="destination1">
-            </div>
-        </div>
-        <div class="container">
-            <div class="destination">
-                <img src="../img/coast maasai.jpg" alt="destination1">
-            </div>
-        </div>
-        <div class="container">
-            <div class="destination">
-                <img src="../img/elephant ride.jpg" alt="destination1">
-            </div>
-        </div>
-        <div class="container">
-            <div class="destination">
-                <img src="../img/kenya-exp1.jpg" alt="destination1">
-            </div>
-        </div>
-        <div class="container">
-            <div class="destination">
-                <img src="../img/maasai jumping 2.jpeg" alt="destination1">
-            </div>
-        </div>
+    <div class="destinations">
+        <h1 class="popular-destinations-title">All Destinations</h1>
+        <div id="popular-destinations" class="popular-destinations"></div>
     </div>
+   
     <div class="floating-button">
         <a href="../login page/book.html" class="float-button">Book Now</a>
     </div>
@@ -55,5 +99,31 @@
         <p>&copy; 2024 JALIKOI. All rights reserved.</p>
 
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchAllDestinations();
+        });
+
+        function fetchAllDestinations() {
+            fetch('../get_all_destinations.php')
+                .then(response => response.json())
+                .then(destinations => {
+                    const container = document.getElementById('popular-destinations');
+                    container.innerHTML = '';
+                    destinations.forEach(destination => {
+                        const div = document.createElement('div');
+                        div.className = 'destination-card';
+                        div.innerHTML = `
+                            <img src="../${destination.image_path}" alt="${destination.name}">
+                            <h2>${destination.name}</h2>
+                            <p class="location">${destination.location}</p>
+                            <button class="learnmore"><a href="">Learn more</a></button>
+                        `;
+                        container.appendChild(div);
+                    });
+                })
+                .catch(error => console.error('Error fetching destinations:', error));
+        }
+    </script>
 </body>
 </html>

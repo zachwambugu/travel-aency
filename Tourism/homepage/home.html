@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel agency</title>
     <link rel="stylesheet" href="home.css">
+    <style>
+     
+    </style>
 </head>
 <body>
    <div class="starter">
@@ -29,54 +32,24 @@
                 <h1>Your best Travel Agency <br> <span>come &</span><br>Travel with Us</h1>
 
             </div>
-            
+
           
             <div class="form">
                 <h2>Search</h2>
-                <input type="text" name="destination" placeholder="Enter destination">
+                <input type="text" name="destination" placeholder="Enter destination" id="locationSearch">
                 <input type="date" name="date" placeholder="">
                 <input type="number" name="price" placeholder="select by price">
 
-                <button class="btnn"><a href="#">Search</a></button>
-
-
+                <button onclick="searchDestinations()" class="btnn"><a href="#">Search</a></button>
+                
             </div>
-
+            <div id="featured-destinations"></div>
         </div>
    </div>
    <div class="destinations">
         <h1 class="popular-destinations-title">Popular Destinations</h1>
         <div class="popular-destinations">
-            <div class="container destination1">
-                <h2>destination 1</h2>
-                <p class="location">Tsavo</p>
-                <button class="learnmore"> <a href="">Learn more</a></button>
-            </div>
-            <div class="container destination2">
-                <h2>destination 2</h2>
-                <p class="location">Coast</p>
-                <button class="learnmore"> <a href="">Learn more</a></button>
-            </div>
-            <div class="container destination3">
-                <h2>destination 3</h2>
-                <p class="location">Nakuru</p>
-                <button class="learnmore"> <a href="">Learn more</a></button>
-            </div>
-            <div class="container destination4">
-                <h2>destination 4</h2>
-                <p class="location">Laikipia</p>
-                <button class="learnmore"> <a href="">Learn more</a></button>
-            </div>
-            <div class="container destination5">
-                <h2>destination 5</h2>
-                <p class="location">Mt Kenya</p>
-                <button class="learnmore"> <a href="">Learn more</a></button>
-            </div>
-            <div class="container destination6">
-                <h2>destination 6</h2>
-                <p class="location">no where</p>
-                <button class="learnmore"> <a href="">Learn more</a></button>
-            </div>
+            <div id="popular-destinations" class="popular-destinations"></div>
         </div>
         <button class="alldestinations"> <a href="../all-destinations/all-destinations.html">All destinations</a></button>
     </div>
@@ -164,5 +137,13 @@
     </div>
     
     <script src="home.js"></script>    
+    <script>
+         function searchDestinations() {
+            const location = document.getElementById('locationSearch').value;
+            localStorage.setItem('searchLocation', location);
+            window.location.href = '../search-results/results.html';
+        } 
+
+    </script>
 </body>
 </html>

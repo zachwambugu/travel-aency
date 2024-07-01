@@ -6,3 +6,13 @@ window.addEventListener('scroll', function() {
         footer.style.display = 'none';
     }
 });
+
+function searchDestinations() {
+    const location = document.getElementById('locationSearch').value;
+    localStorage.setItem('searchLocation', location);
+    window.location.href = '../search-results/results.html';
+} 
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchAllDestinations();
+});

@@ -189,150 +189,103 @@ header .book .bookbtn a{
     text-align: center;
 }
 
-.icons a{
-    text-decoration: none;
-    color: #d8f3dc;
-}
-
-.icons ion-icon{
-    color: #d8f3dc;
-    font-size: 30px;
-    padding-left:14px;
-    padding-top: 5px;
-    transition: 0.3s ease;
-}
 
 
 .icons ion-icon:hover{
     color:#2d6a4f;
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card h2 {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 10px;
+}
+.card p {
+    padding: 10px;
+    margin: 0;
+}
+.card:hover {
+    transform: scale(1.05);
+}
 
 
-.destinations{
-    background-color: #d8f3dc;
-    margin-top: 0;
+.destinations {
+    padding: 20px;
 }
 .popular-destinations-title {
-    font-size:50px;
-    font-weight: bold;
     text-align: center;
-    margin: 10px 0 1px;
-    color: #2d6a4f;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
-
-.popular-destinations{
+.popular-destinations {
     display: flex;
-    overflow-x: auto;
-    padding: 20px;
-    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+    padding: 10px;
+}
+.container img {
     width: 100%;
-    box-sizing: border-box;
-    min-height: 400px;
-    border-radius: 20px;
+    height: 200px;
+    object-fit: cover;
 }
-.popular-destinations header{
-    display: flex;
+.container h2 {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 10px 0;
 }
-
-
-.container{
-    background-size: cover;
-    background-position: center;
-    border: 1px solid #2d6a4f;
-    border-radius: 8px;
-    padding: 0px;
-    margin: 0 10px;
-    min-width: 250px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
-
+.container p {
+    margin: 0;
+    padding: 0 10px;
 }
-.container h2{
-    font-size: 18px;
-    margin-bottom: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.container .location{
-    color: #2d6a4f;
-    opacity: 0.5;
-    font-size: 25px;
-    background-color:#d8f3dc;
-    max-width: fit-content;
-    border-radius: 10px;
-    padding: 0px 5px;
-}
-.popular-destinations .learnmore{
-    width: 100px;
-    height: 30px;
-    background:#2d6a4f;
+.container button {
+    background-color: #28a745;
+    color: #fff;
     border: none;
-    margin-bottom: 1px;
-    font-size: 18px;
-    border-radius: 8px;
+    border-radius: 4px;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: .4s ease;
-    position: absolute;
-    /*left: 0;*/
-    right: 0;
-    bottom: 0;
+    transition: background-color 0.3s;
+    margin: 10px 0;
 }
-
-.popular-destinations .learnmore a{
+.container button a {
+    color: #fff;
     text-decoration: none;
-    color: black;
-    transition: .3s ease;
 }
-
-.learnmore:hover{
-    background-color:#d8f3dc;
+.container button:hover {
+    background-color: #218838;
 }
-.container.destination1 {
-    background-image: url('../img/camels ride.jpg');
+.container:hover {
+    transform: scale(1.05);
 }
-.container.destination2 {
-    background-image: url('../img/coast maasai.jpg');
-}
-.container.destination3 {
-    background-image: url('../img/elephant ride.jpg');
-}
-.container.destination4 {
-    background-image: url('../img/giraffe.jpg');
-}
-.container.destination5 {
-    background-image: url('../img/kenya-exp1.jpg');
-}
-.container.destination6 {
-    background-image: url('../img/Kenya.jpeg');
-}
-.destinations .alldestinations{
-    width: 150px;
-    height: 30px;
-    background:#2d6a4f;
-    border: none;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: .4s ease;
-    position: absolute;
-}
-.destinations .alldestinations a{
-    text-decoration: none;
-    color:black;
-    transition: .3s ease;
-}
-.destinations .alldestinations:hover{
-    background-color:#d8f3dc;
-    color: #2d6a4f;
-}
+ 
 
 .prices{
     background-image: url('../img/mount suswa pointing.jpg');
@@ -543,3 +496,5 @@ header .book .bookbtn a{
     text-decoration: solid;
     color: #d8f3dc;
 }
+
+
