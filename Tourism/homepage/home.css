@@ -191,56 +191,35 @@ header .book .bookbtn a{
 
 
 
-.icons ion-icon:hover{
-    color:#2d6a4f;
-}
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-}
-.card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-.card h2 {
-    font-size: 1.5em;
-    margin: 0;
-    padding: 10px;
-}
-.card p {
-    padding: 10px;
-    margin: 0;
-}
-.card:hover {
-    transform: scale(1.05);
-}
-
-
 .destinations {
     padding: 20px;
-}
-.popular-destinations-title {
+    background-color: #fff;
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
 }
+
+.popular-destinations-title {
+    margin-bottom: 20px;
+    font-size: 1.5em; /* Adjust font size */
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 0 20px; /* Adjust margins */
+    color: #2d6a4f;
+}
+
+.destinations p {
+    font-size: larger;
+    color: #2d6a4f;
+}
+
 .popular-destinations {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
     gap: 20px;
+    flex-wrap: wrap;
 }
-.container {
+
+.popular-destinations .card {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -248,45 +227,55 @@ header .book .bookbtn a{
     width: 300px;
     overflow: hidden;
     transition: transform 0.3s;
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.container img {
+
+.popular-destinations .card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-.container h2 {
+
+.popular-destinations .card h2 {
     font-size: 1.5em;
     margin: 0;
-    padding: 10px 0;
+    padding: 10px;
 }
-.container p {
+
+.popular-destinations .card p {
+    padding: 10px;
     margin: 0;
-    padding: 0 10px;
 }
-.container button {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 10px 0;
-}
-.container button a {
-    color: #fff;
-    text-decoration: none;
-}
-.container button:hover {
-    background-color: #218838;
-}
-.container:hover {
+
+.popular-destinations .card:hover {
     transform: scale(1.05);
 }
- 
 
+.alldestinations {
+    height: 50px;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:#2d6a4f;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: #d8f3dc;
+    font-size: 18px;
+}
+.alldestinations:hover{
+    cursor: pointer;
+    color:#d8f3dc;
+    background-color:#173829;
+    border-radius: 5px;
+    transition: 0.5s;
+    }
+.alldestinations a{
+    text-decoration: none;
+    color:#d8f3dc;
+}
 .prices{
     background-image: url('../img/mount suswa pointing.jpg');
 
@@ -498,3 +487,8 @@ header .book .bookbtn a{
 }
 
 
+
+
+
+
+ 

@@ -24,7 +24,7 @@
             </ul>
         </nav>
         <div class="book">
-            <button class="bookbtn" href=""><a href="../login page/book.html">Book Now</a></button>
+            <button class="bookbtn" href=""><a href="../login page/login.php">Book Now</a></button>
         </div>
     </header>
         <div class="content1">
@@ -37,7 +37,6 @@
             <div class="form">
                 <h2>Search</h2>
                 <input type="text" name="destination" placeholder="Enter destination" id="locationSearch">
-                <input type="date" name="date" placeholder="">
                 <input type="number" name="price" placeholder="select by price">
 
                 <button onclick="searchDestinations()" class="btnn"><a href="#">Search</a></button>
@@ -51,8 +50,9 @@
         <div class="popular-destinations">
             <div id="popular-destinations" class="popular-destinations"></div>
         </div>
-        <button class="alldestinations"> <a href="../all-destinations/all-destinations.html">All destinations</a></button>
+        <button class="alldestinations"><a href="../all-destinations/all-destinations.html">All destinations</a></button>
     </div>
+
     <div class="prices">
         <h1 class="best-prices-title">Pricing</h1>
         <div class="best-prices">
@@ -138,11 +138,58 @@
     
     <script src="home.js"></script>    
     <script>
+        //
          function searchDestinations() {
             const location = document.getElementById('locationSearch').value;
             localStorage.setItem('searchLocation', location);
             window.location.href = '../search-results/results.html';
         } 
+        function loadPopularDestinations() {
+    fetch('../get_popular_destinations.php')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(locations => {
+            console.log('Fetched popular locations:', locations); // Debugging line
+            const container = document.getElementById('popular-destinations');
+            container.innerHTML = '';
+
+            const locationPromises = locations.map(location => {
+                return fetch(`../get_destinations.php?location=${encodeURIComponent(location.location)}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    });
+            });
+
+            return Promise.all(locationPromises);
+        })
+        .then(allDestinations => {
+            console.log('Fetched destinations for each popular location:', allDestinations); // Debugging line
+            const container = document.getElementById('popular-destinations');
+            allDestinations.forEach(destinations => {
+                destinations.forEach(destination => {
+                    const div = document.createElement('div');
+                    div.className = 'card';
+                    div.innerHTML = `
+                        <img src="../${destination.image_path}" alt="${destination.name}">
+                        <h2>${destination.name}</h2>
+                        <p>${destination.description}</p>
+                        <p><strong>Location:</strong> ${destination.location}</p>
+                    `;
+                    container.appendChild(div);
+                });
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+document.addEventListener('DOMContentLoaded', loadPopularDestinations);
 
     </script>
 </body>

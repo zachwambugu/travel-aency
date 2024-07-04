@@ -1,3 +1,5 @@
+
+//footer styling at the bottom
 window.addEventListener('scroll', function() {
     const footer = document.getElementById('footer');
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
@@ -7,12 +9,9 @@ window.addEventListener('scroll', function() {
     }
 });
 
+//function saves the search query
 function searchDestinations() {
     const location = document.getElementById('locationSearch').value;
     localStorage.setItem('searchLocation', location);
     window.location.href = '../search-results/results.html';
 } 
-
-document.addEventListener('DOMContentLoaded', () => {
-    fetchAllDestinations();
-});

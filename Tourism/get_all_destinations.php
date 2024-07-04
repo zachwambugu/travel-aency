@@ -1,5 +1,5 @@
 <?php
-// get_all_destinations.php
+// fetches all destinations from the database
 
 header('Content-Type: application/json');
 
@@ -17,6 +17,7 @@ if ($conn->connect_error) {
     die(json_encode(['error' => 'Connection failed: ' . $conn->connect_error]));
 }
 
+//gets all destinations
 $sql = "SELECT name, location, image_path FROM destinations";
 $result = $conn->query($sql);
 
