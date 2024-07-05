@@ -56,18 +56,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body background="../login page/sunset giraffe.webp">
     <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">Jalikoi</h2>
-            </div>
-            <div class="menu">
-                <h2 class="title">Book with Us</h2>
-            </div>
-            <!--<div class="search">
-                <input class="srch" type="search" name="" placeholder="Type to Text">
-                <a href=""><button class="btn">Search</button></a>
-            </div>-->>
+    <header>
+        <div class="logo">
+            <p>JALIKOI</p>
         </div>
+        <nav>
+            <ul>
+                <li><a href="../homepage/home.html">Home</a></li>
+                <li><a href="../about-us/about-us.html">About Us</a></li>
+                <li><a href="../all-destinations/all-destinations.html">Gallery</a></li>
+                <li><a href="../privacy/privacy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
         <div class="content">
             <h1>Book & <br> <span>Travel </span> <br> with us</h1>
             <p class="par">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora praesentium 
@@ -95,5 +96,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         document.getElementById('password').value = '';
     });
     </script>
+     <footer>
+        <p>&copy; 2024 JALIKOI. All rights reserved.</p>
+    </footer>
 </body>
 </html>

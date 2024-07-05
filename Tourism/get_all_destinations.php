@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 }
 
 //gets all destinations
-$sql = "SELECT name, location, image_path FROM destinations";
+$sql = "SELECT name, destination_id, location, image_path FROM destinations";
 $result = $conn->query($sql);
 
 $destinations = [];

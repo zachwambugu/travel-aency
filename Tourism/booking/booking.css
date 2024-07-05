@@ -109,6 +109,20 @@ section.booking-summary {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.booking-summary ul {
+    padding: 0; 
+    list-style-type: none;
+}
+
+.booking-item {
+    margin-bottom: 20px; 
+    padding: 10px; 
+    border: 1px solid #1b4f37; 
+    border-radius: 5px; 
+    background-color: #e6fff4; 
+}
+
+
 /* Footer Styles */
 footer {
     background-color: #2d6a4f;

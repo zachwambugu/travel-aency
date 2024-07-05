@@ -23,8 +23,10 @@ if ($conn->connect_error) {
 
 //fetch user bookings
 $user_id = $_SESSION['user_id'];
-$sql = "SELECT destination, date, people, payment FROM bookings WHERE user_id = ?";
-$stmt = $conn->prepare($sql);
+$sql = "SELECT b.booking_date, b.people, b.payment, d.name AS destination_name 
+        FROM bookings b 
+        JOIN destinations d ON b.destination_id = d.destination_id 
+        WHERE b.user_id = ?";$stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -74,9 +76,9 @@ $conn->close();
                 
                 <label for="payment">Payment Method:</label>
                 <select id="payment" name="payment">
-                    <option value="credit_card">Cash on travel day</option>
-                    <option value="paypal">Mpesa</option>
-                    <!-- Add more payment options as needed -->
+                    <option value="cash on travel day">Cash on travel day</option>
+                    <option value="bank">Mpesa</option>
+                    
                 </select>
                 
                 <button type="submit">Book Now</button>
@@ -88,9 +90,9 @@ $conn->close();
             <?php if (!empty($bookings)): ?>
                 <ul>
                     <?php foreach ($bookings as $booking): ?>
-                        <li>
-                            <strong>Destination:</strong> <?php echo htmlspecialchars($booking['destination']); ?><br>
-                            <strong>Date:</strong> <?php echo htmlspecialchars($booking['date']); ?><br>
+                        <li class="booking-item">
+                            <strong>Destination:</strong> <?php echo htmlspecialchars($booking['destination_name']); ?><br>
+                            <strong> For Date:</strong> <?php echo htmlspecialchars($booking['booking_date']); ?><br>
                             <strong>Number of People:</strong> <?php echo htmlspecialchars($booking['people']); ?><br>
                             <strong>Payment Method:</strong> <?php echo htmlspecialchars($booking['payment']); ?>
                         </li>

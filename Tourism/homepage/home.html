@@ -56,29 +56,20 @@
     <div class="prices">
         <h1 class="best-prices-title">Pricing</h1>
         <div class="best-prices">
-            <div class="container range1">
-                <h2>price</h2>
+            <div class="container range1" onclick="showDestinationsInRange(1000, 2000)">
+                <h2>Price Range 1</h2>
                 <p class="location">1k-2k</p>
+                <div id="range1-destination"></div>
             </div>
-            <div class="container range2">
-                <h2>price</h2>
-                <p class="location">2k-3k</p>
+            <div class="container range2" onclick="showDestinationsInRange(2001, 5000)">
+                <h2>Price Range 2</h2>
+                <p class="location">2k-5k</p>
+                <div id="range2-destination"></div>
             </div>
-            <div class="container range3">
-                <h2>price</h2>
-                <p class="location">3k-4k</p>
-            </div>
-            <div class="container range4">
-                <h2>price</h2>
-                <p class="location">4k-5k</p>
-            </div>
-            <div class="container range5">
-                <h2>price</h2>
-                <p class="location">5k-10k</p>
-            </div>
-            <div class="container range6">
-                <h2>price</h2>
-                <p class="location">10k-20k</p>
+            <div class="container range3" onclick="showDestinationsInRange(5001, 20000)">
+                <h2>Price Range 3</h2>
+                <p class="location">5k-20k</p>
+                <div id="range3-destination"></div>
             </div>
         </div>
     </div>

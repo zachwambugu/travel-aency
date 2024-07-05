@@ -1,6 +1,6 @@
 <?php
-
 session_start();
+
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -15,7 +15,6 @@ if ($conn->connect_error) {
     die(json_encode(['error' => 'Connection failed: ' . $conn->connect_error]));
 }
 
-
 // if (!isset($_SESSION['user_id'])) {
 //     header("Location: ../booking/booking.php");
 //     exit();
@@ -28,10 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $people = $_POST['people'];
     $payment = $_POST['payment'];
 
-    // Assuming you have a way to get the logged-in user ID
-    // Replace the following line with your actual user authentication logic
-    //$user_id = 1; // Example user ID
-
     // Get destination ID from the destination name
     $stmt = $conn->prepare("SELECT destination_id FROM destinations WHERE name = ?");
     $stmt->bind_param("s", $destination);
@@ -43,9 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $destination_id = $row['destination_id'];
 
         // Insert booking data into the bookings table
-        $stmt = $conn->prepare("INSERT INTO bookings (user_id, destination_id, booking_date) VALUES (?, ?, ?)");
-        $booking_date = $date . ' ' . $time; // Combining date and time
-        $stmt->bind_param("iis", $user_id, $destination_id, $booking_date);
+        $stmt = $conn->prepare("INSERT INTO bookings (user_id, destination_id, booking_date, people, payment) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("iisis", $user_id, $destination_id, $date, $people, $payment);
 
         if ($stmt->execute()) {
             echo "Booking confirmed!";

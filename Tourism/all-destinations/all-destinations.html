@@ -54,16 +54,13 @@
         .destination-card button {
             background-color:#2d6a4f;
             color: #d8f3dc;
+            text-decoration: none;
             border: none;
             border-radius: 4px;
             padding: 10px 20px;
             cursor: pointer;
             transition: background-color 0.3s;
             margin: 10px 0;
-        }
-        .destination-card button a {
-            color: #d8f3dc;
-            text-decoration: none;
         }
         .destination-card button:hover {
             background-color:#2d6a4f;
@@ -99,6 +96,14 @@
         <p>&copy; 2024 JALIKOI. All rights reserved.</p>
 
     </footer>
+
+    <!-- modal structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-details" class="modal-details"></div>
+        </div>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             fetchAllDestinations();
@@ -117,12 +122,46 @@
                             <img src="../${destination.image_path}" alt="${destination.name}">
                             <h2>${destination.name}</h2>
                             <p class="location">${destination.location}</p>
-                            <button class="learnmore"><a href="">Learn more</a></button>
+                            <button class="learnmore" onclick="openModal(${destination.destination_id})">Learn more</button>
                         `;
                         container.appendChild(div);
                     });
                 })
                 .catch(error => console.error('Error fetching destinations:', error));
+        }
+        function openModal(destination_id) {
+            console.log(`Fetching details for destination ID: ${destination_id}`); // Debug log
+            fetch(`../get_destination_details.php?id=${destination_id}`)
+                .then(response => response.json())
+                .then(details => {
+                    console.log(details); // Log the response to check if the data is correct
+                    if (details.error) {
+                        console.error('Error fetching destination details:', details.error);
+                        return;
+                    }
+                    const modalDetails = document.getElementById('modal-details');
+                    modalDetails.innerHTML = `
+                        <h2>${details.name}</h2>
+                        <p><strong>Description:</strong> ${details.description}</p>
+                        <p><strong>Location:</strong> ${details.location}</p>
+                        <p><strong>Distance from Nairobi:</strong> ${details.distance} km</p>
+                        <p><strong>Nearest Town:</strong> ${details.towns}</p>
+                        <p><strong>Price:</strong> ${details.cost}</p>
+                    `;
+                    document.getElementById('myModal').style.display = "block";
+                })
+                .catch(error => console.error('Error fetching destination details:', error));
+        }
+
+        //close modal
+        document.querySelector('.close').onclick = function() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('myModal')) {
+                document.getElementById('myModal').style.display = "none";
+            }
         }
     </script>
 </body>

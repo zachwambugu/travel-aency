@@ -11,81 +11,43 @@
     height: 109vh;
 }
 
-.navbar{
-    width: 1200px;
-    height: 75px;
-    margin: auto;
+header {
+    background-color: #2d6a4f;
+    color:#d8f3dc;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.icon{
-    width: 200px;
-    float: left;
-    height: 7px;
+header .logo {
+    display: flex;
+    align-items: center;
 }
 
-.logo{
+header .logo p {
+    margin: 0;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
     color: #d8f3dc;
-    font-size: 35px;
-    font-family: Arial;
-    padding-left: 20px;
-    float: left;
-    padding-top: 10px;
-}
-
-.menu{
-    width: 400px;
-    float: left;
-    height: 75px;
-}
-
-.title{
-    color: #d8f3dc;
-    font-family: arial;
-    margin-top: 20px;
-    font-size: 25px;
-    text-align: center;
-}
-
-.search{
-    width: 330px;
-    float: left;
-    margin-left: 270px;
-}
-
-.srch{
-    font-family: 'Times New Roman';
-    width: 200px;
-    height: 40px;
-    background:transparent;      
-    border: 1px solid #2d6a4f;
-    margin-top: 13px;
-    color: #d8f3dc;
-    border-right: none;
-    font-size: 16px;
-    float: left;
-    padding: 10px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-}
-
-.btn{
-    width: 100px;   
-    height: 40px;
-    background: #2d6a4f;
-    border: 2px solid #2d6a4f;
-    margin-top: 13px;
-    color: #d8f3dc;
-    font-size: 15px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.btn:focus{
-    outline: none;
-}
-
-.srch:focus{
-     outline: none;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .content{
@@ -224,20 +186,19 @@
     text-align: center;
 }
 
-.icons a{
-    text-decoration: none;
-    color: #d8f3dc;
+
+
+
+footer {
+    background-color: #2d6a4f;
+    color:#d8f3dc;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.icons ion-icon{
-    color: #d8f3dc;
-    font-size: 30px;
-    padding-left:14px;
-    padding-top: 5px;
-    transition: 0.3s ease;
-}
-
-
-.icons ion-icon:hover{
-    color:#2d6a4f;
+footer p {
+    margin: 0;
 }
