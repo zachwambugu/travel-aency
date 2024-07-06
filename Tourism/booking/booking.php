@@ -77,7 +77,7 @@ $conn->close();
                 <label for="payment">Payment Method:</label>
                 <select id="payment" name="payment">
                     <option value="cash on travel day">Cash on travel day</option>
-                    <option value="bank">Mpesa</option>
+                    <option value="bank">bank option</option>
                     
                 </select>
                 

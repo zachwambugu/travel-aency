@@ -36,14 +36,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ../booking/booking.php");
             exit();
         } else {
-            echo "Invalid password.";
+            $_SESSION['error'] = "Invalid password.";
         }
     } else {
-        echo "No user found with that email.";
+        $_SESSION['error'] = "No user found with that email.";
     }
 
     $stmt->close();
     $conn->close();
+}
+$error = '';
+if (isset($_SESSION['error'])) {
+    $error = $_SESSION['error'];
+    unset($_SESSION['error']); // Clear the error after displaying it
 }
 ?>
 
@@ -80,6 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="form">
                     <form action="../login page/login.php" method="post" >
                         <h2>Login Here</h2>
+                        
                         <input type="email"  id="email" name="email" placeholder="Enter Email here" autocomplete="0ff">
                         <input type="password" id="password" name="password" placeholder="Enter Password" autocomplete="off">
                         <button type="submit" class="btnn">Login</button>
@@ -87,6 +93,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <p class="link">Dont have an account<br>
                     <a href="../registration/registration.html">Sign Up </a>here</p>
+                    <?php if (!empty($error)): ?>
+                        <p class="error"><?php echo htmlspecialchars($error); ?></p>
+                    <?php endif; ?>
+
 
                 </div>
         </div>

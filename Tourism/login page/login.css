@@ -50,6 +50,16 @@ nav ul li a {
     font-weight: bold;
 }
 
+.error {
+    color:#d8f3dc; /* Ensure the text is readable against the background */
+    margin: 10px;   
+    background-color: #ff4c4c; /* Red background for the error message */
+    border: 2px solid #d8f3dc; /* Light green border for contrast */
+    padding: 10px; /* Add some padding for better readability */
+    border-radius: 10px; /* Rounded corners for a more polished look */
+    text-align: center; /* Center the text */
+}
+
 .content{
     width: 1200px;
     height: auto;
