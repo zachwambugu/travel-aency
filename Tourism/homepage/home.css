@@ -106,7 +106,7 @@ header .book .bookbtn a{
 
 .form{
     width: 280px;
-    height: 410px;
+    height: 300px;
     background:linear-gradient(to top, rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
     position: absolute;
     top: 100px;
@@ -125,7 +125,12 @@ header .book .bookbtn a{
     margin: 2px;
     padding: 8px;
 }
-
+.form label{
+    color: #d8f3dc;
+    padding: 15px, 0px;
+    margin-top: 20px;
+    
+}
 .form input{
     width: 240px;
     height: 35px;
@@ -193,7 +198,7 @@ header .book .bookbtn a{
 
 .destinations {
     padding: 20px;
-    background-color: #fff;
+    background-color:#f9fcf9;
     text-align: center;
 }
 
@@ -220,7 +225,7 @@ header .book .bookbtn a{
 }
 
 .popular-destinations .card {
-    background-color: #fff;
+    background-color:#d8f3dc;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -283,19 +288,43 @@ header .book .bookbtn a{
 
 .prices{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px
-}
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  position: relative; 
+  text-align: center;
 
+}
+.prices h1{
+    text-align: center;
+
+}
+.best-prices-title {
+    margin-bottom: 2px;
+    font-size: 1.5em; 
+    font-weight: bold;
+    color: #2d6a4f;
+    position: relative;
+    left: 50%;
+    margin-top: 0px;
+  }
+
+.best-prices{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 .container{
-    background-color: #fff;
+    background-color:#d8f3dc;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
     overflow: hidden;
     transition: transform 0.3s;
+    margin: 30px;
 }
 .container img{
     width: 100%;
@@ -311,7 +340,7 @@ header .book .bookbtn a{
     padding: 10px;
     margin: 0;
 }
-.ontainer:hover {
+.container:hover {
     transform: scale(1.05);
 }
 
@@ -369,6 +398,7 @@ header .book .bookbtn a{
 .content-text  h2{
     color: #2d6a4f;
     margin: 10px;
+    text-align: center;
 }
 
 .content-text p {
@@ -376,6 +406,7 @@ header .book .bookbtn a{
     font-size: 16px;
     line-height: 1.5;
     color: #2d6a4f;
+    text-align: center;
 }
 
 .content-image {

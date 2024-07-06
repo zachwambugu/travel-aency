@@ -71,9 +71,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </header>
         <div class="content">
             <h1>Book & <br> <span>Travel </span> <br> with us</h1>
-            <p class="par">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora praesentium 
-                <br>hic sequi earum at. Quidem voluptatem sint rerum laborum, praesentium, inventore  
-                <br>quod ullam, quasi optio tempora illo voluptatibus maxime amet.</p>
+            <p class="par">Welcome to JALIKOI! We create unforgettable travel experiences, <br>
+             handling all details so you can enjoy every moment. Explore our diverse 
+              destinations<br>—from serene beaches to majestic mountains— <br>and see why 
+               JALIKOI is the top choice for explorers. Start your extraordinary journey with us today.</p>
 
                 <button class="cn"> <a href="../all-destinations/all-destinations.html">View all destinations</a></button>
                 <div class="form">

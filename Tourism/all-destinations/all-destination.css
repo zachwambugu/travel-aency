@@ -6,7 +6,7 @@
 
 header {
     background-color: #2d6a4f;
-    color: white;
+    color:#d8f3dc;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color:#d8f3dc;
     text-decoration: none;
     font-weight: bold;
 }
@@ -121,7 +121,7 @@ nav ul li a {
 
 footer {
     background-color: #2d6a4f;
-    color: white;
+    color: #d8f3dc;
     text-align: center;
     padding: 10px 20px;
     position: fixed;

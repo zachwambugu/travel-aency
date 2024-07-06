@@ -44,12 +44,51 @@
         .card:hover {
             transform: scale(1.05);
         }
+
+        .floating-button {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.floating-button {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    background-color: #2d6a4f;
+    color:#d8f3dc;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.floating-button a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    vertical-align: middle;
+    color: #d8f3dc;
+}
+
+.floating-button:hover {
+    background-color: #1b4f37;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
     </style>
 </head>
 <body>
     <div id="loading" style="display:none;">Loading...</div>
     <div id="no-results" style="display:none;">No results found.</div>
     <div id="featured-destinations" class="container"></div>
+
+
+    <div class="floating-button">
+        <a href="../login page/login.php" class="float-button">Book Now</a>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

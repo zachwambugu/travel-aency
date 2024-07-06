@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Destinations</title>
+    <link rel="stylesheet" href="filtered-destinations.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ebf3eb;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+    background-color: #2d6a4f;
+    color:#d8f3dc;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo p {
+    margin: 0;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #d8f3dc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+        .destinations {
+            padding: 20px;
+        }
+        .filtered-destinations-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .filtered-destinations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .destination-card {
+            background-color: #d8f3dc;
+            border: 1px solid #d8f3dc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            text-align: center;
+            padding: 10px;
+        }
+        .destination-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .destination-card h2 {
+            font-size: 1.5em;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .destination-card p {
+            margin: 0;
+            padding: 0 10px;
+        }
+        .destination-card button {
+            background-color:#2d6a4f;
+            color: #d8f3dc;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px 0;
+        }
+        .destination-card button a {
+            color: #d8f3dc;
+            text-decoration: none;
+        }
+        .destination-card button:hover {
+            background-color:#2d6a4f;
+        }
+        .destination-card:hover {
+            transform: scale(1.05);
+        }
+
+
+
+        .floating-button {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.floating-button {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    background-color: #2d6a4f;
+    color:#d8f3dc;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.floating-button a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    vertical-align: middle;
+    color: #d8f3dc;
+}
+
+.floating-button:hover {
+    background-color: #1b4f37;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+footer {
+    background-color: #2d6a4f;
+    color:#d8f3dc;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <p>JALIKOI</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../homepage/home.html">Home</a></li>
+                <li><a href="../about-us/about-us.html">About Us</a></li>
+                <li><a href="../all-destinations/all-destinations.html">Gallery</a></li>
+                <li><a href="../privacy/privacy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="destinations">
+        <h1 class="filtered-destinations-title">Filtered Destinations</h1>
+        <div id="filtered-destinations" class="filtered-destinations"></div>
+    </div>
+    <div class="floating-button">
+        <a href="../login page/login.php" class="float-button">Book Now</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 JALIKOI. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const minPrice = params.get('min_price');
+            const maxPrice = params.get('max_price');
+            fetchDestinationsInRange(minPrice, maxPrice);
+        });
+
+        function fetchDestinationsInRange(min_price, max_price) {
+            fetch(`../get_destinations_in_range.php?min_price=${min_price}&max_price=${max_price}`)
+                .then(response => response.json())
+                .then(destinations => {
+                    const container = document.getElementById('filtered-destinations');
+                    container.innerHTML = '';
+
+                    destinations.forEach(destination => {
+                        const div = document.createElement('div');
+                        div.className = 'destination-card';
+                        div.innerHTML = `
+                            <img src="../${destination.image_path}" alt="${destination.name}">
+                            <h2>${destination.name}</h2>
+                            <p>${destination.description}</p>
+                            <p><strong>Location:</strong> ${destination.location}</p>
+                            <p><strong>Distance from Nairobi:</strong> ${destination.distance} km</p>
+                            <p><strong>Nearest Towns:</strong> ${destination.towns}</p>
+                            <p><strong>Price:</strong> ${destination.cost}</p>
+                        `;
+                        container.appendChild(div);
+                    });
+                })
+                .catch(error => console.error('Error fetching destinations in range:', error));
+        }
+    </script>
+</body>
+</html>

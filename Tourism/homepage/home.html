@@ -36,8 +36,8 @@
           
             <div class="form">
                 <h2>Search</h2>
+                <label for="destination"> Search by destinations</label>
                 <input type="text" name="destination" placeholder="Enter destination" id="locationSearch">
-                <input type="number" name="price" placeholder="select by price">
 
                 <button onclick="searchDestinations()" class="btnn"><a href="#">Search</a></button>
                 
@@ -56,23 +56,33 @@
     <div class="prices">
         <h1 class="best-prices-title">Pricing</h1>
         <div class="best-prices">
-            <div class="container range1" onclick="showDestinationsInRange(1000, 2000)">
+            <div class="container range1" onclick="window.location.href='../filtered_destinations/filtered_destinations.html?min_price=1000&max_price=2000'">
                 <h2>Price Range 1</h2>
                 <p class="location">1k-2k</p>
                 <div id="range1-destination"></div>
             </div>
-            <div class="container range2" onclick="showDestinationsInRange(2001, 5000)">
+            <div class="container range2" onclick="window.location.href='../filtered_destinations/filtered_destinations.html?min_price=2001&max_price=5000'">
                 <h2>Price Range 2</h2>
                 <p class="location">2k-5k</p>
                 <div id="range2-destination"></div>
             </div>
-            <div class="container range3" onclick="showDestinationsInRange(5001, 20000)">
+            <div class="container range3" onclick="window.location.href='../filtered_destinations/filtered_destinations.html?min_price=5001&max_price=20000'">
                 <h2>Price Range 3</h2>
                 <p class="location">5k-20k</p>
                 <div id="range3-destination"></div>
             </div>
         </div>
+        
     </div>
+    <!-- Add this modal somewhere in your HTML body
+    <div id="destination-modal" style="display: none;">
+        <div id="destination-modal-content">
+            Modal content will be dynamically inserted here 
+        </div>
+        <button onclick="document.getElementById('destination-modal').style.display='none'">Close</button>
+    </div>
+    -->
+    
     <div class="logo">
         <h2>In partnership with</h2>
         <div class="logos">
@@ -87,11 +97,14 @@
     <div class="reviews">
         <div class="content-text">
             <h2>What our customers say</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>
-                elit. Harum, recusandae. Voluptates tenetur, obcaecati <br>
-                 itaque doloribus, illo iste cum maxime accusantium  <br>
-                 voluptatibus aliquam excepturi. Quae illo aperiam <br>
-                 quidem cumque commodi odio.</p>
+            <p>Our adventure with JALIKOI was beyond our wildest dreams! <br>
+                From the stunning landscapes to the rich cultural experiences,<br>
+                 every moment was magical. The service was impeccable,<br>
+                  with every detail thoughtfully planned and <br>
+                   executed. We especially loved the guided <br>
+                    tours and the opportunity to meet <br>
+                     and interact with local communities. <br>
+                      The memories we made on this trip will last a lifetime. We can't wait to book our next journey with JALIKOI!.</p>
         </div>
         <div class="content-image">
             <img src="../img/mountain hiking.jpg" alt="mountain hiking">
@@ -181,6 +194,7 @@
 }
 
 document.addEventListener('DOMContentLoaded', loadPopularDestinations);
+
 
     </script>
 </body>

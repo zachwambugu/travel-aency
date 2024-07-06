@@ -3,13 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color:#d8f3dc;
     color: #333;
 }
 
 header {
     background-color: #2d6a4f;
-    color: white;
+    color:#d8f3dc;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@ header .user-info p {
 }
 
 header .user-info a {
-    color: white;
+    color: #d8f3dc;
     text-decoration: none;
     padding: 5px 10px;
     background-color: #333;
@@ -46,7 +46,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #d8f3dc;
     text-decoration: none;
     font-weight: bold;
 }

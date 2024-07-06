@@ -18,7 +18,7 @@ if (isset($_GET['min_price']) && isset($_GET['max_price'])) {
     $min_price = intval($_GET['min_price']);
     $max_price = intval($_GET['max_price']);
 
-    $stmt = $conn->prepare("SELECT destination_id, name, description, location, image_path FROM destinations WHERE cost BETWEEN ? AND ?");
+    $stmt = $conn->prepare("SELECT * FROM destinations WHERE cost BETWEEN ? AND ?");
     $stmt->bind_param("ii", $min_price, $max_price);
     $stmt->execute();
     $result = $stmt->get_result();
